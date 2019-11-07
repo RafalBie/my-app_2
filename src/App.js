@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-         Nauka reacta na propsie
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Header from './common/Header'
+import Footer from './common/Footer'
+
+import Attention from './sections/Attention'
+import AboutUs from './sections/AboutUs'
+import Services from './sections/Services'
+
+import './App.css'
+
+const Main = ({ children }) => {
+  return <main>{children}</main>
 }
 
-export default App;
+
+function App() {
+	return (
+		<div className='App'>
+			<Header />
+      <Main>
+        <Attention selectedLang={'pl'} subTitle={'Mogę coś wpisać'}/>
+
+				<AboutUs />
+				<Services />
+			</Main>
+			<Footer />
+		</div>
+	)
+}
+
+export default App
