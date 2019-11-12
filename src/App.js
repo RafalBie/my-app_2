@@ -14,15 +14,28 @@ const Main = ({ children }) => {
 }
 
 
+const onSuccess = (services)=>{
+	console.log('onSuccess', services)
+}
+
+
+
 function App() {
+
+
+	
 	return (
 		<div className='App'>
 			<Header />
-      <Main>
-        <Attention selectedLang={'pl'} subTitle={'Mogę coś wpisać'}/>
-
+			<Main>
+				<Attention selectedLang={'pl'} subTitle={'Mogę coś wpisać'}/>
 				<AboutUs />
-				<Services />
+
+
+
+				<Services data={['.',',','/']} 
+				onSuccess={onSuccess} />
+
 			</Main>
 			<Footer />
 		</div>
