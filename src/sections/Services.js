@@ -81,10 +81,6 @@ class Services extends React.Component {
 
 	componentDidMount(){
 
-		const { onSuccess, data } = this.props
-
-		console.log('componentDidMount', onSuccess, data)
-
 		// BAD !!!
 		// this.state.services = services
 
@@ -105,8 +101,6 @@ class Services extends React.Component {
 
 	render() {
 		const { services, imBusy, imWithError } = this.state
-
-		const { data } = this.props
 
 		// obsługę ładowania - loading
 		if(imBusy === true){
@@ -140,13 +134,11 @@ class Services extends React.Component {
 							<div className='services-group'>
 								{services.map((element, idx) => {
 									return <SingleService key={idx} {...element} 
-									
 										onElementClick={(event)=>{
 											console.log('event', event)
 											console.log('ten element', event.target)
 											console.log('to co weszło do komponentu', {...element} )
 										}}
-
 									/>
 								})}
 							</div>
