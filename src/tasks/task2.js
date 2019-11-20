@@ -29,7 +29,16 @@ class Input extends React.Component{
 
 
 // 2. z podanego htmla wytworzyć aktywnie działające komponenty funkcyjne
-// const htmlButton = (<div><button>Wciśnij mnie</button></div>)
+const htmlButton = ({label,onButtonClick}) => {
+        render() { 
+            return (
+            
+            <div>
+            <button onClick = {()=>(console.log('kliknięto przycisk'))}>Wciśnij mnie</button>
+            </div>)
+            }
+       
+}
 
 // ten komponent ma otrzymywać propsy "label" i "onButtonClick"
 // "label" ma być wyrenderowany jako label przycisku
