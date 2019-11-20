@@ -7,7 +7,7 @@ import Attention from './sections/Attention'
 import AboutUs from './sections/AboutUs'
 import Services from './sections/Services'
 import ContactForm from './sections/Contact'
-import task2 from './tasks/task2'
+import Input from './tasks/task2'
 import './App.css'
 
 const Main = ({ children }) => {
@@ -27,7 +27,7 @@ function App() {
 				<AboutUs/>
 				<Services />
 				<ContactForm/>
-				<task2/>
+				<Input/>
 			</Main>
 			<Footer />
 		</div>

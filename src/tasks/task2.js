@@ -8,7 +8,7 @@ const htmlInput = () => {
 
 class Input extends React.Component{
     state = {
-        inputValue:htmlInput
+        inputValue:""
     }
        
     onInputChange (){
@@ -30,13 +30,13 @@ class Input extends React.Component{
 
 // 2. z podanego htmla wytworzyć aktywnie działające komponenty funkcyjne
 const htmlButton = ({label,onButtonClick}) => {
-        render() { 
+       
             return (
             
             <div>
             <button onClick = {()=>(console.log('kliknięto przycisk'))}>Wciśnij mnie</button>
             </div>)
-            }
+           
        
 }
 
@@ -66,4 +66,4 @@ const htmlButton = ({label,onButtonClick}) => {
 //     componentDidMount(){}
 //     render(){}
 // }
-export default task2
+export default Input
