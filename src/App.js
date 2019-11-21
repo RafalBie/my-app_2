@@ -8,6 +8,7 @@ import AboutUs from './sections/AboutUs'
 import Services from './sections/Services'
 import ContactForm from './sections/Contact'
 import Input from './tasks/task2'
+import Form from './tasks/task3'
 import './App.css'
 
 const Main = ({ children }) => {
@@ -21,13 +22,14 @@ function App() {
 	
 	return (
 		<div className='App'>
-			<Header />
+			{/* <Header /> */}
 			<Main>
-				<Attention selectedLang={'pl'} subTitle={'Mogę coś wpisać'}/>
+				{/* <Attention selectedLang={'pl'} subTitle={'Mogę coś wpisać'}/>
 				<AboutUs/>
 				<Services />
-				<ContactForm/>
+				<ContactForm/> */}
 				<Input/>
+				<Form/>
 			</Main>
 			<Footer />
 		</div>
