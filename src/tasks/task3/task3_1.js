@@ -30,16 +30,30 @@ class Form extends React.Component {
             console.log('test')
           }}
         >
+          <div>
+          <label>podaj płeć</label>
           <select
             onChange={(event) => {
               const { value } = event.target;
               // console.log('test')
             }}
           >
-            <option value=""> opcja 1</option>
-            <option value=""> opcja 2</option>
+            <option 
+            name='sex'
+            value={sex}
+            onChange={this.changeStateOfInput}
+            >
+              kobieta </option>
+            <option 
+            name='sex'
+            value={sex}
+            onChange={this.changeStateOfInput}
+            >męzczyzna</option>
+            
             
           </select>
+          </div>
+          <div> 
             <input 
             type=''placeholder="podaj wiek" 
             name='age'
@@ -47,13 +61,16 @@ class Form extends React.Component {
             onChange={this.changeStateOfInput}
             // console.log(event.target.value)
             />
-            <input 
+
+          </div>
+           
+            {/* <input 
             type="checkbox" 
             name='sex'
             value={sex}
             onChange={this.changeStateOfInput}
             />
-            <label>podaj płeć</label>
+            <label>podaj płeć</label> */}
         </form>
       </div>
     );
